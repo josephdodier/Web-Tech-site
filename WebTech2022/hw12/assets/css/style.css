@@ -1,0 +1,33 @@
+/* CSS Document */
+
+.banner {
+	text-align: center;
+	background-color: #e1e1e1;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.navItem {
+	font-weight: bold;
+	text-align: center;
+	padding: 6px;
+}
+
+.navItem:hover{
+	background-color: #e1e1e1;
+}
+
+.navActive {
+	text-align: center;
+	background-color: #B3FBFF;
+	padding: 6px;
+}
+
+.tabs{
+	padding-bottom: 12px;
+}
+
+.tablePad{
+	text-align: center;
+	padding: 12px;
+}

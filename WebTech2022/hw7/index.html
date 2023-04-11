@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW7 Calculator</title>
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="form-group">
+	<label for="number1">First Value:</label>
+	<input class="form-control" type="text" id="number1">
+</div>
+<div class="form-group">
+	<label for="number2">Second Value:</label>
+	<input class="form-control" type="text" id="number2">
+</div>
+<div>Function</div>
+<select class="form-control" id="formOperator">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+	<option>/</option>
+</select>
+<button type="button" class="btn btn-success" id="submit" onclick="calc()">Calculate</button>
+<h3 id="output"></h3>
+</body>
+</html>
+<script type="text/javascript">
+	function calc(){
+		var num1;
+		var num2;
+		var oper;
+		var ans;
+		
+		num1=document.getElementById('number1').value;
+		num2=document.getElementById('number2').value;
+		oper=document.getElementById('formOperator');
+		
+		console.log("Number 1: "+num1);
+		console.log("Number 2: "+num2);
+		console.log("Operator: "+oper.value);
+		
+		if(oper.value == '+'){
+			ans = parseInt(num1)+parseInt(num2);
+			document.getElementById('output').innerHTML="The result of "+num1+oper.value+num2+" is: "+ans;
+		}else if(oper.value == '-'){
+			ans = parseInt(num1)-parseInt(num2);
+			document.getElementById('output').innerHTML="The result of "+num1+oper.value+num2+" is: "+ans;
+		}else if(oper.value == '*'){
+			ans = parseInt(num1)*parseInt(num2);
+			document.getElementById('output').innerHTML="The result of "+num1+oper.value+num2+" is: "+ans;
+		}else if(oper.value == '/'){
+			ans = parseInt(num1)/parseInt(num2);
+			document.getElementById('output').innerHTML="The result of "+num1+oper.value+num2+" is: "+ans;
+		}
+
+	}
+</script>
